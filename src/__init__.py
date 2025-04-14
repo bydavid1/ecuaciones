@@ -1,0 +1,1 @@
+from .lineales.gauss import gauss_elimination
