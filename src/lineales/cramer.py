@@ -1,5 +1,3 @@
-# sistemas_ecuaciones/lineales/cramer.py
-
 def determinante(matriz):
     n = len(matriz)
     if n == 1:
