@@ -2,12 +2,13 @@ from src.lineales import jacobi
 
 def test_jacobi():
     a = [
-        [2, 1],
-        [5, 7]
+        [10, 2, -3],
+        [4, 7, -1],
+        [-2, 1, 4]
     ]
-    b = [11, 13]
+    b = [1, -1, 5]
     
     solucion = jacobi(a, b)
     
     # verificar
-    assert solucion == [3.0, 1.0], f"Error: {solucion}"
+    assert solucion == [0.65, -0.28, 1.64], f"Error: {solucion}"

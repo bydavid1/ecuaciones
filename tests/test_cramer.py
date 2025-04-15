@@ -2,12 +2,13 @@ from src.lineales import cramer
 
 def test_cramer():
     a = [
-        [2, 1],
-        [5, 7]
+        [1, 2, 1],
+        [3, 1, 1],
+        [2, 3, -1]
     ]
-    b = [11, 13]
+    b = [7, 5, 3]
     
     solucion = cramer(a, b)
     
     # verificar
-    assert solucion == [3.0, 1.0], f"Error: {solucion}"
+    assert solucion == [0, 2, 3], f"Error: {solucion}"

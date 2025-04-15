@@ -2,12 +2,13 @@ from src.lineales import lu
 
 def test_lu():
     a = [
-        [2, 1],
-        [5, 7]
+        [1, 4, -2],
+        [3, -2, 5],
+        [2, 3, 1]
     ]
-    b = [11, 13]
+    b = [3, 14, 11]
 
     solucion = lu(a, b)
 
     # verificar
-    assert solucion == [3.0, 1.0], f"Error: {solucion}"
+    assert solucion == [1, 2, 3], f"Error: {solucion}"

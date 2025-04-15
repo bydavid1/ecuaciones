@@ -37,4 +37,9 @@ def lu(a, b):
     L, U = lu_decomposition(a)
     y = sustituir_adelante(L, b)
     x = sustituir_atras(U, y)
+
+    # Redondear 
+    for i in range(len(x)):
+        x[i] = round(x[i], 2)
+    # Devolver el vector solución
     return x

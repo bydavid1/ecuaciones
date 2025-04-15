@@ -14,10 +14,9 @@ def jacobi(a, b, tolerancia=1e-10, max_iter=100):
             suma = sum(a[i][j] * x[j] for j in range(n) if j != i)
             x_new[i] = (b[i] - suma) / a[i][i]
 
-        # Verificar convergencia
+        # verificar convergencia
         if all(abs(x_new[i] - x[i]) < tolerancia for i in range(n)):
-            return x_new
-
+            return [round(val, 2) for val in x_new]
         x = x_new
 
     raise Exception("El metodo no convergio")

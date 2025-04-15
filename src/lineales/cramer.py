@@ -13,15 +13,10 @@ def determinante(matriz):
     return det
 
 def cramer(a, b):
-    """
-    Resuelve un sistema de ecuaciones lineales usando la Regla de Cramer.
-    a: matriz de coeficientes
-    b: vector de términos independientes
-    """
     n = len(a)
     det_a = determinante(a)
     if det_a == 0:
-        raise ValueError("El sistema no tiene solución única.")
+        raise ValueError("El sistema no tiene solucion.")
 
     soluciones = []
     for i in range(n):
